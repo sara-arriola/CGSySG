@@ -1,18 +1,18 @@
 # CGSySG
-Colores según frecuencia (p5.FFT):
-Graves → azul, verde, bordo
-Agudos → rojo, amarillo
-
-Tamaño del dibujo según volumen
-
-Tipo de dibujo random (4 tipos)
-
+Tipo de dibujo (delineado) random (5 tipos)
 aparecen en posiciones/inclinación random
 
-se crea un nuevo dibujo solo cuando se detecta el inicio de un sonido:
+interacción 1:
+Colores graves: azul, verde, bordo → si la frecuencia está por debajo de 200 Hz (todos estos valores lo cambian según su micrófono).
+Colores agudos: rojo, amarillo → si la frecuencia está por encima de 350 Hz.
+Frecuencia media (entre 200 y 350 Hz): mezcla ambos/aleatorio.
 
-cuando hacés un sonido corto, el dibujo aparece
+interacción 2:
+Tamaño del dibujo según volumen
 
-si hacés un sonido largo (más de 2 segundos), el objeto empieza a rotar
+interacción 3:
+cuando hacés un sonido corto, los dibujos aparecen
+si hacés un sonido largo (más de 1.2 segundos), empiezan a rotar hasta que pares
 
-los objetos desaparecen no según su tiempo de creación, sino desde que el sonido se vuelve null
+falta de interacción:
+los objetos desaparecen no según su tiempo de creación, sino desde que se deja de emitir sonido (10 segundos de vida c/u).
